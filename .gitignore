@@ -16,6 +16,7 @@ env/
 # Generated outputs
 outputs/
 experiments/
+environment_report.json
 
 # Downloaded archives
 *.zip

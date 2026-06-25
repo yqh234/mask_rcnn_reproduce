@@ -4,8 +4,8 @@
 
 ## 当前项目
 
-- 项目目录：`C:\Users\86136\mask_rcnn_reproduce`
-- Python 解释器：`C:\Users\86136\detectron2\.venv\Scripts\python.exe`
+- 项目目录：当前仓库根目录
+- 推荐 Python 解释器：`.\.venv\Scripts\python.exe`
 
 ## 当前环境
 
@@ -20,7 +20,7 @@
 运行 Python 文件时使用：
 
 ```powershell
-& "C:\Users\86136\detectron2\.venv\Scripts\python.exe" 脚本名.py
+& ".\.venv\Scripts\python.exe" 脚本名.py
 ```
 
 ## 现有重要文件

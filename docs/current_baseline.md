@@ -6,14 +6,14 @@
 - 终端：PowerShell
 - Python：3.12.7
 - GPU：NVIDIA RTX 4060
-- Python 解释器：`C:\Users\86136\detectron2\.venv\Scripts\python.exe`
+- 推荐 Python 解释器：`.\.venv\Scripts\python.exe`
 - 深度学习框架：PyTorch 2.11.0+cu128，TorchVision 0.26.0+cu128
 - 当前使用：TorchVision Mask R-CNN，不是 Detectron2
 
 运行脚本时使用：
 
 ```powershell
-& "C:\Users\86136\detectron2\.venv\Scripts\python.exe" 脚本名.py
+& ".\.venv\Scripts\python.exe" 脚本名.py
 ```
 
 ## 目录结构摘要
@@ -93,7 +93,7 @@ weights/mask_rcnn_pennfudan.pth
 命令：
 
 ```powershell
-& "C:\Users\86136\detectron2\.venv\Scripts\python.exe" infer_trained.py
+& ".\.venv\Scripts\python.exe" infer_trained.py
 ```
 
 输入：
@@ -117,7 +117,7 @@ weights/mask_rcnn_pennfudan.pth
 命令：
 
 ```powershell
-& "C:\Users\86136\detectron2\.venv\Scripts\python.exe" infer_image.py
+& ".\.venv\Scripts\python.exe" infer_image.py
 ```
 
 输入：
@@ -152,7 +152,7 @@ masks：torch.Size([2, 1, 536, 559])
 命令：
 
 ```powershell
-& "C:\Users\86136\detectron2\.venv\Scripts\python.exe" evaluate_thresholds.py
+& ".\.venv\Scripts\python.exe" evaluate_thresholds.py
 ```
 
 输入：
@@ -219,7 +219,7 @@ PNG 图片
 
 1. `train_pennfudan.py` 中仍有官方教程残留的 `os.system("wget ...")` 代码。当前 Windows 项目规则要求不使用 `wget`，所以不建议直接运行该训练脚本。
 2. `train_pennfudan.py` 的训练逻辑主要位于顶层代码，没有清晰的 `main()` 入口保护。导入或运行时可能触发下载、训练等副作用。
-3. 项目目录原本不是独立 Git 仓库；上层 `C:\Users\86136` 是 Git 根目录，会导致 `git status` 混入大量用户目录文件。
+3. 项目现在应作为独立 Git 仓库维护，避免从用户主目录这类上层目录执行项目提交。
 4. 训练权重文件超过 GitHub 普通单文件大小限制，上传代码仓库时应忽略该文件，并在本地保留。
 
 ## 建议的最小整理方案
