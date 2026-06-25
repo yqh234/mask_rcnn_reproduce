@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+
+# Tool and notebook cache
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Generated outputs
+outputs/
+experiments/
+
+# Downloaded archives
+*.zip
+
+# Trained model weights are kept locally.
+# mask_rcnn_pennfudan.pth is larger than GitHub's normal 100MB file limit.
+weights/*.pth
+weights/*.pt
+weights/*.ckpt
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
